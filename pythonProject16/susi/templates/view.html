@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+  <img class="card-img-top" src="{{name.image.url}}" style="height:300px;width:250px;padding-top:30px;" alt="Card image cap">
+        </div>
+        <div class="col-md-6">
+            <div class="card-body">
+   Item: <h1 class="card-title">{{name.name}}</h1>
+    Price:<h6 class="card-text">{{name.price}}.RS</h6>
+               Brand: <h6 class="card-text">{{name.brand}}</h6>
+                Size:<h6 class="card-text">{{name.size}}</h6>
+        <p class="card-text">{{name.details}}</p>
+
+  </div>
+</div>
+    </div>
+</div>
+
+<a class='btn btn-primary' href="{% url 'update' name.id %}" >Update</a>
+<a class="btn btn-primary" href="{% url 'delete' name.id %}"> delete</a>
+{% endblock %}

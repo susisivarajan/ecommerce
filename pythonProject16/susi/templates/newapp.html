@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<h2>Ecommerce</h2>
+<form action="add" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="item" placeholder="enter the item name"><br><br>
+        <input type="text" name="price" placeholder="enter the price"><br><br>
+        <input type="text" name="Brand" placeholder="enter the  brand name"><br><br>
+        <input type="text" name="size" placeholder="enter the size"><br><br>
+    <textarea name="details" placeholder="enter the item details"></textarea><br><br>
+            <input type="file" name="image" ><br><br>
+
+    <input type="submit"><br><br>
+</form>
+{% endblock %}
